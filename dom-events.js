@@ -6,21 +6,35 @@ window.onload = () => {
   getAstros()
 }
 
+getAstros = () => {
+  let xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    //  if response is successful and request is finished...
+    console.log(this.readyState)
+  if (this.readyState == 4 && this.status == 200) {
+    renderAstros(JSON.parse(this.responseText))
+    }
+  }
+  xhttp.open("GET", "http://api.open-notify.org/astros.json", true)
+  // type of request, url, asyc
+  xhttp.send()
+}
+
 // getAstros = () => {
 //   fetch('http://api.open-notify.org/astros.json')
 //   .then(r => r.json())
 //   .then(astros => renderAstros(astros))
 // }
 
-async function getAstros() {
-    try {
-      let response = await fetch("http://api.open-notify.org/astros.json")
-      let astros = await response.json()
-      renderAstros(astros)
-    } catch (e) {
-      console.log(e)
-    }
-}
+// async function getAstros() {
+//     try {
+//       let response = await fetch("http://api.open-notify.org/astros.json")
+//       let astros = await response.json()
+//       renderAstros(astros)
+//     } catch (error) {
+//       console.log(error)
+//     }
+// }
 
 renderAstros = (data) => {
   const astros = data["people"]
