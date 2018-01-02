@@ -17,7 +17,6 @@ const astroNames = (data) => {
 }
 console.log("names of people in space: ", astroNames(peopleInSpace))
 
-//tiuhgieruthr
 const allInSameCraft = (data) => {
   // return a boolean that specifies whether all astronauts are in the same space craft
   let craft = peopleInSpace.people[0].craft
