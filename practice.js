@@ -2,30 +2,52 @@
 console.log(peopleInSpace)
 
 const numberOfAstrosInSpace = (data) => {
+	return data.number
   //return the number of astronauts in space right now, using the data
 }
 console.log("number of people in space: ", numberOfAstrosInSpace(peopleInSpace))
 
 
 const astroNames = (data) => {
+	let arr = data.people.map((people) => {
+	return people.name
+})
+return arr
   // return an array containing the name strings of the astronauts in space
 }
 console.log("names of people in space: ", astroNames(peopleInSpace))
 
 
 const allInSameCraft = (data) => {
-  // return a boolean that specifies whether all astronauts are in the same space craft
+	for (i = 1; i < data.people.length; i++) {
+		if (data.people[i].craft != data.people[0].craft) {
+			return false
+		}
+	}
+	return true
 }
+  // return a boolean that specifies whether all astronauts are in the same space craft
+
 console.log("same craft? ", allInSameCraft(peopleInSpace))
 
 
 const successfulResponse = (data) => {
+	if (data.message == "success") {
+		return true
+	}
+	else return false
   // return a boolean that specifies whether the response from the Open Notify API was successful
 }
 console.log("successful response? ", successfulResponse(peopleInSpace))
 
 
 const wheresJoe = (data) => {
+	for (i = 0; i < data.people.length; i++) {
+		if (data.people[i].name == "Joe Acaba") {
+			return "in space!"
+		}
+	}
+	return "dunno."
   // return "in space!" if Joe Acaba is in space right now. Otherwise, return "dunno."
 }
 console.log("where's Joe? ", wheresJoe(peopleInSpace))
