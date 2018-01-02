@@ -22,7 +22,7 @@
 12. High five
 
 ## lab instructions
-Using data from [Open Notify](http://open-notify.org/), let's find out about the six astronauts in space right now! In spaceData.js, there is a constant, peopleInSpace, with a value of an object. The object is the response from a GET request to http://api.open-notify.org/astros.json. (If some of these terms are unfamiliar, that's okay! Visit the previous link to see for yourself what's happening.) You'll be using this data to return select information from this response object. Later on, we'll dig more into accessing data and rendering it to the DOM.  
+Using data from [Open Notify](http://open-notify.org/), let's find out about the six astronauts in space right now! In spaceData.js, there is a constant, peopleInSpace, with a value of an object. The object is the response from a GET request to http://api.open-notify.org/astros.json. (If some of these terms are unfamiliar, that's okay! Visit the previous link to see for yourself what's happening.) You'll be using this data to return select information from this response object. Later on, we'll dig more into fetching data and rendering it to the DOM.  
 
 Before you start, notice that index.html file? What's going on in there? Check it out! You can see the static text in that index.html file by simply opening the page in browser. (Give it a shot if you'd like.) But we're going to be writing JavaScript in this lab, so simply viewing the static file won't do.
 

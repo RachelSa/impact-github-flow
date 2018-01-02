@@ -1,5 +1,5 @@
-const greetingEl = document.getElementById("greeting")
-const astrosEl = document.getElementById("astros")
+// const greetingEl = document.getElementById("greeting")
+// const astrosEl = document.getElementById("astros")
 
 // window.onload = () => {
 //   greetingEl.innerText = "oh, hey there!"
