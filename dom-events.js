@@ -1,6 +1,6 @@
 const greetingEl = document.getElementById("greeting")
 const astrosEl = document.getElementById("astros")
-const title = document.getElementById('test')
+// const title = document.getElementById('test')
 
 window.onload = () => {
   greetingEl.innerText = "oh, hey there!"
