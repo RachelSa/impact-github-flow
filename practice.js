@@ -51,3 +51,16 @@ window.onload = () => {
   list.innerHTML = domString
   // console.log(listItems)
 }
+
+
+const title = document.getElementsByClassName("title")[0]
+title.onclick = () => {
+  alert("these are all the astronauts!")
+}
+
+form = document.getElementsByTagName('form')[0]
+textInput = document.getElementById("textInput")
+form.onsubmit = (event) => {
+  event.preventDefault()
+  console.log(textInput.value)
+}
