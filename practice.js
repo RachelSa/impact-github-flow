@@ -11,11 +11,11 @@ console.log("number of people in space: ", numberOfAstrosInSpace(peopleInSpace))
 const astroNames = (data) => {
   // return an array containing the name strings of the astronauts in space
     let astroname = []
-    
+
     for(i = 0; i < data.number; i++) {
         astroname[i] = data.people[i].name
     }
-    
+
     return astroname
 }
 console.log("names of people in space: ", astroNames(peopleInSpace))
@@ -24,7 +24,7 @@ console.log("names of people in space: ", astroNames(peopleInSpace))
 const allInSameCraft = (data) => {
   // return a boolean that specifies whether all astronauts are in the same space craft
     var val1 = data.people[0].craft
-    
+
     for(i = 0; i < data.number; i++) {
         if(data.people[i].craft =! val1) {
             return false
@@ -50,7 +50,7 @@ const wheresJoe = (data) => {
     for(i = 0; i < data.number; i++) {
         //console.log(data.people[i].name)
         if(data.people[i].name.includes("Joe")) {
-            
+
             return "in space!"
         }
     }
@@ -60,3 +60,17 @@ console.log("where's Joe? ", wheresJoe(peopleInSpace))
 
 // BONUS
 // Using your astroNames function, dynamically render each of the astronauts' names to the DOM in an unordered list when the page loads.
+const tempList = document.getElementById("astroList")
+window.onload = () => {
+
+  tempArray = astroNames(peopleInSpace)
+  final = ""
+
+  for(i = 0; i < tempArray.length; i++) {
+    temp = tempArray[i]
+    temp = "<li>" + temp + "</li>"
+    final += temp
+    tempArray[i] = temp
+  }
+  tempList.innerHTML = final
+}
