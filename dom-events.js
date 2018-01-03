@@ -29,6 +29,15 @@ title.onclick = () => {
 
 // when a user clicks away from the input, log ("bye") to the console.
 
+const form = document.getElementById("almostlunch")
+const textInput = document.getElementById("textInput")
+const answer = document.getElementById("answer")
+form.onsubmit = (event) => {
+  event.preventDefault()
+  console.log(textInput.value)
+  answer.innerText = textInput.value
+}
+
 // wrap the input element with a form element.
 
 // when the form is submitted, render the client's inputted text to the DOM
