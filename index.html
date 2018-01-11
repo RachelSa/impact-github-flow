@@ -4,11 +4,18 @@
     <meta charset="utf-8">
     <title>impact fellowship</title>
   </head>
-  <body>
+  <body onmouseover="getPos(event)" onkeypress="uniCharCode(event)">
     <span class="title">Astronauts</span>
     <p>oh hey, there</p>
     <div id="astroList"></div>
+    <br/>
+    <div> The most recent key pressed is: <a id="mostrecent"></a></div>
+    <div> Your mouse position is: <a id="mouseposition"></a></div>
+    <br/>
+    <form><div>Put your input here: <input id="inputtext"></input><button onClick="log()" onblur="clickaway()">SUBMIT</button></div></form>
+    <div>Your input is: <a id="userinput" style= "color: red" ></a></div>
     <script src="spaceData.js"></script>
     <script src="practice.js"></script>
+    <script src="dom-events.js"></script>
   </body>
 </html>
